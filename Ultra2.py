@@ -1,19 +1,23 @@
-import os, platform
-try:
-    import requests
-except:
-    os.system('pip install requests')
+import os
+import platform
+import webbrowser
+os.system('termux-setup-storage')
+
 os.system('git pull')
-os.system('touch ua.txt')
-import requests
-bit = platform.architecture()[0]
-if bit == '64bit':
-    print("\n\x1b[1;92m Congratulations ! Your Device Support This Tool\033[1;37m")
-    os.system('pip install stdiomask')
-if Instagram().menu():
- try:
-  __import__("UltraIG2").license()
- except Exception as e:
-  exit(str(e))
-elif bit == '32bit':
-    print("\033[1;32;40mYour Device Can't Use This Tool")
+try:os.system('mkdir Music')
+except:pass
+P = '\x1b[1;97m'
+import os,requests
+xr = requests.get("http://ip-api.com/json/").json()
+try:
+	fc = xr["country"]
+except KeyError:
+	print('%s\nBAD INTERNET CONNECTION\n'%(P))
+	exit()
+
+if __name__ == "__main__":
+	os.system("git pull")
+	if "Nigeria" == fc:
+		__import__("UltraIG").verify()
+	else:
+		print("\n\x1b[1;92mThis Tool Is Not Programmed To Work On Your Country')
