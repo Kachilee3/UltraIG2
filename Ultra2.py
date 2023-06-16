@@ -20,4 +20,4 @@ if __name__ == "__main__":
 	if "Nigeria" == fc:
 		__import__("UltraIG").verify()
 	else:
-		print('\n\x1b[1;92mThis Tool Is Not Programmed To Work On Your Country')
+		print('\n\x1b[1;92mSorry This Tool Is Not Programmed To Work On Your Country')
