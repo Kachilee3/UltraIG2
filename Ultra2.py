@@ -10,7 +10,9 @@ bit = platform.architecture()[0]
 if bit == '64bit':
     print("\n\x1b[1;92m Congratulations ! Your Device Support This Tool\033[1;37m")
     os.system('pip install stdiomask')
-__import__("UltraIG").verify()
+if Instagram().menu():
+ try:
+  __import__("UltraIG2").license()
  except Exception as e:
   exit(str(e))
 elif bit == '32bit':
